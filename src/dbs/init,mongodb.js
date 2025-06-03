@@ -18,7 +18,10 @@ class MongoDB {
             mongoose.set('debug', {color:true});
         }
 
-        mongoose.connect(dbURI).then(_ => console.log(`Connected to MongoDB at ${dbURI} PRO` ,countConnect()))
+        mongoose.connect(dbURI,{
+            maxPoolSize: 10, // Set max pool size
+        }
+        ).then(_ => console.log(`Connected to MongoDB at ${dbURI} PRO` ,countConnect()))
             .catch(err => {
                 console.error('MongoDB connection error:', err);
                 process.exit(1);

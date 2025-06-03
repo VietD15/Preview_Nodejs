@@ -9,6 +9,8 @@ const helmet = require('helmet');
 app.use(morgan('dev')); // logging middleware
 app.use(helmet()); // security middleware
 
+const {chechOverLoad} = require('./helpers/chech.connect');
+chechOverLoad(); // check overload connections
 
 
 // ---------------init db

@@ -16,3 +16,5 @@
     - helmet.ieNoOpen() : ngăn chặn tấn công từ Internet Explorer
 
 -npm i compression: nén các response trả về từ server
+
+-os, process: các module có sẵn trong Node.js để làm việc với hệ điều hành và quá trình hiện tại, vú dụ như check OverLoad CPU, Memory, Disk
