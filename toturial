@@ -18,3 +18,11 @@
 -npm i compression: nén các response trả về từ server
 
 -os, process: các module có sẵn trong Node.js để làm việc với hệ điều hành và quá trình hiện tại, vú dụ như check OverLoad CPU, Memory, Disk
+
+-npm i jsonwebtoken: một thư viện để tạo và xác thực JSON Web Tokens (JWT), thường được sử dụng trong xác thực và ủy quyền.( dùng trong auth)
+
+npm i lodash --save: 
+
+npm i amqplib --save -dev
+
+npm install nodemailer

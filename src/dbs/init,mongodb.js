@@ -2,7 +2,8 @@
 
 const mongoose = require('mongoose');
 
-const dbURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/shopDev';
+const {db:{host, name, port}} = require('../configs/config.mongodb'); // Importing config is not necessary here, but can be used for other configurations
+const dbURI =`mongodb://${host}:${port}/${name}`; // Corrected the variable name from 'port' to 'post' in the URI
 
 const { countConnect } = require('../helpers/chech.connect');
 
@@ -21,7 +22,7 @@ class MongoDB {
         mongoose.connect(dbURI,{
             maxPoolSize: 10, // Set max pool size
         }
-        ).then(_ => console.log(`Connected to MongoDB at ${dbURI} PRO` ,countConnect()))
+        ).then(_ => console.log(`Connected to MongoDB at ${dbURI} ` ,countConnect()))
             .catch(err => {
                 console.error('MongoDB connection error:', err);
                 process.exit(1);
